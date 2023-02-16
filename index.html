@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image from Unsplash</title>
+</head>
+<body>
+	<label for="search">Enter search term:</label>
+	<input type="text" id="search" name="search">
+	<button onclick="searchImages()">Search</button>
+	<br>
+	<img id="image" src="">
+	<script>
+		function searchImages() {
+			const searchTerm = document.getElementById("search").value;
+			const imageUrl = `https://source.unsplash.com/1400x600/?${searchTerm}`;
+			document.getElementById("image").src = imageUrl;
+		}
+	</script>
+</body>
+</html>
